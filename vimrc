@@ -9,6 +9,7 @@ set number	"line numbers
 set cursorline	"hl cursor line
 set showmatch 	"match commands
 
+
 set incsearch	"seach as you type
 set hlsearch 	"hilight search
 set ignorecase	"ingorecase
