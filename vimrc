@@ -16,7 +16,7 @@ set showmatch 	"match commands
 "let g:solarized_termtrans=1
 set t_Co=256
 set background=dark
-colorscheme solarized
+colorscheme vividchalk
 
 set incsearch	"seach as you type
 set hlsearch 	"hilight search
