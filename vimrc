@@ -1,7 +1,7 @@
 " Vim configuration file "
 
 syntax enable
-set mouse=a	"enable mouse of All modes
+"set mouse=a	"enable mouse of All modes
 
 " Pathogen plugin management
 call pathogen#infect()
