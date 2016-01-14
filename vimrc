@@ -9,7 +9,7 @@ call pathogen#infect()
 
 " Visuals
 set number	"line numbers
-set cursorline	"hl cursor line
+"set cursorline	"hl cursor line
 set showmatch 	"match commands
 
 "let g:solarized_termcolors=256
