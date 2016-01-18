@@ -6,6 +6,7 @@ syntax enable
 " Pathogen plugin management
 call pathogen#infect()
 
+set backspace=indent,eol,start
 
 " Visuals
 set number	"line numbers
