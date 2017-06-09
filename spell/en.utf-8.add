@@ -1,6 +1,3 @@
--help
-amsart
-AMSLaTeX
 Bertot
 Genaud
 Stéphane
@@ -9,8 +6,6 @@ Julien
 virtualisation
 IaaS
 HPC
-#aas
-Iaas/!
 runtimes
 workflow
 walltime
@@ -18,7 +13,6 @@ virtualized
 OMSSA
 proteomic
 Openstack
-#CHlouder
 VM
 VMs
 Linpack
@@ -27,8 +21,5 @@ SimGrid
 SimSchlouder
 makespan
 Schlouder
-#CHlouder
-#CHlouder
-SCHlouder/!
 workflows
 SchIaaS

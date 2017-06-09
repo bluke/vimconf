@@ -10,7 +10,7 @@ set backspace=indent,eol,start
 
 " Visuals
 set number	"line numbers
-"set cursorline	"hl cursor line
+set cursorline	"hl cursor line
 set showmatch 	"match commands
 
 "let g:solarized_termcolors=256
@@ -30,9 +30,9 @@ filetype plugin on	" enables filetype specific plugins
 filetype plugin indent on "filetype based indent
 
 "Syntastic based options
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 let g:syntastic_python_python_exec = '/usr/bin/python3'
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -41,7 +41,8 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 
-
+"Vim Airline
+set laststatus=2
 
 "Neocomplete 
 let g:neocomplete#enable_at_startup = 1
@@ -56,8 +57,8 @@ let g:go_highlight_build_constraints = 1
 let g:go_list_type = "quickfix"
 
 " move vertically by visual line
-nnoremap j gj
-nnoremap k gk
+"nnoremap j gj
+"nnoremap k gk
 
 "autocomplete
 inoremap <C-@> <C-n>
