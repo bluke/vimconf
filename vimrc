@@ -17,7 +17,7 @@ set showmatch 	"match commands
 "let g:solarized_termtrans=1
 set t_Co=256
 set background=dark
-colorscheme vividchalk
+colorscheme landscape
 
 set incsearch	"seach as you type
 set hlsearch 	"hilight search
@@ -41,8 +41,11 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 
-"Vim Airline
+"Vim lightline
 set laststatus=2
+let g:lightline = {
+      \ 'colorscheme': 'landscape',
+      \ }
 
 "Neocomplete 
 let g:neocomplete#enable_at_startup = 1
