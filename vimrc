@@ -59,7 +59,17 @@ let g:go_list_type = "quickfix"
 nnoremap j gj
 nnoremap k gk
 
+"autocomplete
+inoremap <C-@> <C-n>
 
 "Saving
-nnoremap <F3> :w<cr>
-inoremap <F3> <esc>:w<cr>a
+nnoremap <F5> :w<cr>
+inoremap <F5> <esc>:w<cr>a
+
+nnoremap <F7> :setlocal spell! spelllang=en<CR>
+nnoremap <F8> :setlocal spell! spelllang=fr<CR>
+
+inoremap <F7> <esc>:setlocal spell! spelllang=en<CR>a
+inoremap <F8> <esc>:setlocal spell! spelllang=fr<CR>a
+
+
