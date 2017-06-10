@@ -9,4 +9,5 @@ endif
 let loaded_tex=1
 
 set tw=80
+let &colorcolumn=80
 set foldmethod=syntax

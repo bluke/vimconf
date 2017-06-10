@@ -119,4 +119,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 " }}}
 " }}}
+" commands {{{
+cmap w!! w !sudo tee % >/dev/null
+" }}}
 " vim:foldmethod=marker:foldlevel=0
