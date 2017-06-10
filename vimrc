@@ -2,16 +2,18 @@
 
 syntax enable
 "set mouse=a	"enable mouse of All modes
+set hidden
+let mapleader=","
 
 " Pathogen plugin management
 call pathogen#infect()
 
 set backspace=indent,eol,start
-
+set pastetoggle =<F2>
 " Visuals
 set number	"line numbers
 set cursorline	"hl cursor line
-set showmatch 	"match commands
+set showmatch 	"match parentises
 
 "let g:solarized_termcolors=256
 "let g:solarized_termtrans=1
@@ -44,7 +46,15 @@ let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 "Vim lightline
 set laststatus=2
 let g:lightline = {
-      \ 'colorscheme': 'landscape',
+      \ 'colorscheme' : 'landscape',
+      \ 'active': {
+      \ 'right': [ [ 'lineinfo' ],
+      \            [ 'percent' ],
+      \            [ 'spell', 'fileformat', 'fileencoding', 'filetype' ] ] },
+      \ 'component': {
+      \ 'fileformat': '%{&ff!="unix"?&ff:""}',},
+      \ 'component_visible_condition' : {
+      \ 'fileformat' : '&ff!="unix"',},
       \ }
 
 "Neocomplete 
