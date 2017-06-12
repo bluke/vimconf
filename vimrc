@@ -109,6 +109,7 @@ inoremap <F8> <esc>:setlocal spell! spelllang=fr<CR>a
 inoremap <C-@> <C-n>
 " }}}
 " leader{{{
+nnoremap <leader>h :let @/=""<CR>
 nnoremap <leader>f za
 " Saving
 nnoremap <leader>w :w<cr>
