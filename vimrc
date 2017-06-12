@@ -81,6 +81,8 @@ let g:go_list_type = "quickfix"
 " }}}
 " vimtex {{{
 let g:vimtex_compiler_latexmk = {'callback' : 0}
+let g:vimtex_fold_enabled = 1
+let g:vimtex_fold_manual = 1
 " }}}
 " }}}
 " Shortcuts {{{

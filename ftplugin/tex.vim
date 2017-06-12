@@ -10,4 +10,3 @@ let loaded_tex=1
 
 set tw=80
 let &colorcolumn=81
-setlocal foldmethod=expr foldexpr=vimtex#fold#level(v:lnum)
