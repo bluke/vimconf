@@ -46,6 +46,8 @@ set laststatus=2
 let g:lightline = {
       \ 'colorscheme' : 'landscape',
       \ 'active': {
+      \ 'left': [ [ 'mode', 'paste' ],
+      \           [ 'readonly', 'gitbranch', 'filename', 'modified' ] ],
       \ 'right': [ [ 'lineinfo' ],
       \            [ 'percent' ],
       \            [ 'spell', 'fileformat', 'fileencoding', 'filetype' ] ] },
@@ -53,6 +55,8 @@ let g:lightline = {
       \ 'fileformat': '%{&ff!="unix"?&ff:""}',},
       \ 'component_visible_condition' : {
       \ 'fileformat' : '&ff!="unix"',},
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'},
       \ }
 " }}}
 " Neocomplete {{{
