@@ -40,7 +40,7 @@ set foldnestmax=5
 " }}}
 " Plugins {{{
 " CtrlP {{{
-let g:ctrlp_cmd = 'CtrlPBuffer'
+let g:ctrlp_cmd = 'CtrlPMixed'
 " }}}
 " Lightline {{{
 set laststatus=2
