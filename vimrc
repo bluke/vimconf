@@ -4,10 +4,11 @@ let maplocalleader=";"
 " Pathogen {{{
 call pathogen#infect()
 " }}}
-" Appeearance {{{
+" Appearance {{{
 set t_Co=256
 set background=dark
 colorscheme landscape
+set noshowmode
 set number	"line numbers
 set cursorline	"hl cursor line
 set showmatch 	"match parentises
@@ -68,11 +69,12 @@ let g:neocomplete#enable_at_startup = 1
 "set statusline+=%*
 let g:syntastic_python_python_exec = '/usr/bin/python3'
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+
 " }}}
 " Vim-Go {{{
 let g:go_highlight_functions = 1
@@ -93,7 +95,10 @@ let g:vimtex_fold_manual = 1
 " Insert mode {{{
 inoremap jk <ESC>
 inoremap <leader>f <ESC>za
-inoremap <leader>w <esc>:w<cr>a
+inoremap <leader>w <ESC>:w<CR>a
+" autocomplete {{{
+inoremap <C-@> <C-x><C-o>
+" }}}
 " Buffers {{{
 inoremap <leader>bs <ESC>:split<CR>a
 inoremap <leader>bv <ESC>:vsplit<CR>a
@@ -110,9 +115,6 @@ inoremap <F7> <esc>:setlocal spell! spelllang=en<CR>a
 inoremap <F8> <esc>:setlocal spell! spelllang=fr<CR>a
 
 " }}}
-" }}}
-" autocomplete {{{
-inoremap <C-@> <C-n>
 " }}}
 " leader{{{
 nnoremap <leader>h :let @/=""<CR>
