@@ -112,10 +112,6 @@ inoremap <leader>bs <ESC>:split<CR>a
 inoremap <leader>bv <ESC>:vsplit<CR>a
 inoremap <leader>bn <ESC>:bn<CR>a
 inoremap <leader>bb <ESC>:bp<CR>a
-inoremap <C-h> <ESC><C-w>ha
-inoremap <C-j> <ESC><C-w>ja
-inoremap <C-k> <ESC><C-w>ka
-inoremap <C-l> <ESC><C-w>la
 " }}}
 " FKeys {{{
 inoremap <F5> <esc>:w<cr>a
