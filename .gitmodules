@@ -22,3 +22,9 @@
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
+[submodule "vim-mucomplete"]
+	path = vim-mucomplete
+	url = https://github.com/lifepillar/vim-mucomplete
+[submodule "bundle/vim-mucomplete"]
+	path = bundle/vim-mucomplete
+	url = https://github.com/lifepillar/vim-mucomplete

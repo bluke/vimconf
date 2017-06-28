@@ -40,7 +40,7 @@ set foldnestmax=5
 " }}}
 " Plugins {{{
 " CtrlP {{{
-let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_cmd = 'CtrlPBuffer'
 " }}}
 " Lightline {{{
 set laststatus=2
@@ -60,8 +60,20 @@ let g:lightline = {
       \   'gitbranch': 'fugitive#head'},
       \ }
 " }}}
-" Neocomplete {{{
-let g:neocomplete#enable_at_startup = 1
+" MuComplete {{{
+set completeopt+=menuone
+set shortmess+=c   " Shut off completion messages
+set belloff+=ctrlg " If Vim beeps during completion
+inoremap <expr> <c-e> mucomplete#popup_exit("\<c-e>")
+inoremap <expr> <c-y> mucomplete#popup_exit("\<c-y>")
+inoremap <expr> <cr> mucomplete#popup_exit("\<cr>")
+set completeopt+=noselect
+set completeopt+=noinsert
+let g:mucomplete#enable_auto_at_startup = 1
+inoremap <silent> <plug>(MUcompleteFwdKey) <right>
+imap <right> <plug>(MUcompleteCycFwd)
+inoremap <silent> <plug>(MUcompleteBwdKey) <left>
+imap <left> <plug>(MUcompleteCycBwd)
 " }}}
 " Syntastic {{{
 "set statusline+=%#warningmsg#
@@ -74,7 +86,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
-
 " }}}
 " Vim-Go {{{
 let g:go_highlight_functions = 1
@@ -96,9 +107,6 @@ let g:vimtex_fold_manual = 1
 inoremap jk <ESC>
 inoremap <leader>f <ESC>za
 inoremap <leader>w <ESC>:w<CR>a
-" autocomplete {{{
-inoremap <C-@> <C-x><C-o>
-" }}}
 " Buffers {{{
 inoremap <leader>bs <ESC>:split<CR>a
 inoremap <leader>bv <ESC>:vsplit<CR>a
@@ -113,7 +121,6 @@ inoremap <C-l> <ESC><C-w>la
 inoremap <F5> <esc>:w<cr>a
 inoremap <F7> <esc>:setlocal spell! spelllang=en<CR>a
 inoremap <F8> <esc>:setlocal spell! spelllang=fr<CR>a
-
 " }}}
 " }}}
 " leader{{{
