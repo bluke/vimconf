@@ -42,6 +42,15 @@ set foldnestmax=5
 " CtrlP {{{
 let g:ctrlp_cmd = 'CtrlPBuffer'
 " }}}
+" Grammalecte {{{
+let g:grammalecte_cli_py='~/gram/cli.py'
+noremap <localleader>gh :GrammalecteClear<CR>
+noremap <localleader>gl :/begin{document}/,/end{document}/GrammalecteCheck<CR>
+noremap <localleader>gg :GrammalecteCheck<CR>
+inoremap <localleader>gl <c-o>:/begin{document}/,/end{document}/GrammalecteCheck<CR>
+inoremap <localleader>gg <c-o>:GrammalecteCheck<CR>
+inoremap <localleader>gh <c-o>:GrammalecteClear<CR>
+" }}}
 " Lightline {{{
 set laststatus=2
 let g:lightline = {
@@ -67,13 +76,13 @@ set belloff+=ctrlg " If Vim beeps during completion
 inoremap <expr> <c-e> mucomplete#popup_exit("\<c-e>")
 inoremap <expr> <c-y> mucomplete#popup_exit("\<c-y>")
 inoremap <expr> <cr> mucomplete#popup_exit("\<cr>")
-set completeopt+=noselect
+inoremap <expr> <c-@> mucomplete#popup_exit("\<cr>")
+"set completeopt+=noselect
 set completeopt+=noinsert
 let g:mucomplete#enable_auto_at_startup = 1
-inoremap <silent> <plug>(MUcompleteFwdKey) <right>
-imap <right> <plug>(MUcompleteCycFwd)
-inoremap <silent> <plug>(MUcompleteBwdKey) <left>
-imap <left> <plug>(MUcompleteCycBwd)
+let g:mucomplete#cycle_with_trigger = 1
+imap <c-n> <plug>(MUcompleteFwd)
+imap <c-b> <plug>(MUcompleteBwd)
 " }}}
 " Syntastic {{{
 "set statusline+=%#warningmsg#
@@ -105,18 +114,19 @@ let g:vimtex_fold_manual = 1
 " Shortcuts {{{
 " Insert mode {{{
 inoremap jk <ESC>
-inoremap <leader>f <ESC>za
-inoremap <leader>w <ESC>:w<CR>a
+inoremap <leader><leader> <c-o>
+inoremap <leader>f <c-o>za
+inoremap <leader>w <c-o>:w<CR>
 " Buffers {{{
-inoremap <leader>bs <ESC>:split<CR>a
-inoremap <leader>bv <ESC>:vsplit<CR>a
-inoremap <leader>bn <ESC>:bn<CR>a
-inoremap <leader>bb <ESC>:bp<CR>a
+inoremap <leader>bs <c-o>:split<CR>
+inoremap <leader>bv <c-o>:vsplit<CR>
+inoremap <leader>bn <c-o>:bn<CR>
+inoremap <leader>bb <c-o>:bp<CR>
 " }}}
 " FKeys {{{
-inoremap <F5> <esc>:w<cr>a
-inoremap <F7> <esc>:setlocal spell! spelllang=en<CR>a
-inoremap <F8> <esc>:setlocal spell! spelllang=fr<CR>a
+imap <F5> <c-o><F5>
+imap <F7> <c-o><F7>
+imap <F8> <c-o><F8>
 " }}}
 " }}}
 " leader{{{

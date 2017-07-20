@@ -28,3 +28,9 @@
 [submodule "bundle/vim-mucomplete"]
 	path = bundle/vim-mucomplete
 	url = https://github.com/lifepillar/vim-mucomplete
+[submodule "bundle/vim-orgmode"]
+	path = bundle/vim-orgmode
+	url = https://github.com/jceb/vim-orgmode
+[submodule "bundle/vim-speeddating"]
+	path = bundle/vim-speeddating
+	url = git://github.com/tpope/vim-speeddating.git
