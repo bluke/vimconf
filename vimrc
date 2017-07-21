@@ -54,20 +54,22 @@ inoremap <localleader>gh <c-o>:GrammalecteClear<CR>
 " Lightline {{{
 set laststatus=2
 let g:lightline = {
-      \ 'colorscheme' : 'landscape',
-      \ 'active': {
-      \ 'left': [ [ 'mode', 'paste' ],
-      \           [ 'readonly', 'gitbranch', 'filename', 'modified' ] ],
-      \ 'right': [ [ 'lineinfo' ],
-      \            [ 'percent' ],
-      \            [ 'spell', 'fileformat', 'fileencoding', 'filetype' ] ] },
-      \ 'component': {
-      \ 'fileformat': '%{&ff!="unix"?&ff:""}',},
-      \ 'component_visible_condition' : {
-      \ 'fileformat' : '&ff!="unix"',},
-      \ 'component_function': {
-      \   'gitbranch': 'fugitive#head'},
-      \ }
+	\ 'colorscheme' : 'landscape',
+	\ 'active': {
+	\ 	'left': [ [ 'mode', 'paste' ],
+	\ 		[ 'readonly', 'gitbranch', 'filename', 'modified' ] ],
+	\ 	'right': [ [ 'lineinfo' ],
+	\ 		[ 'percent' ],
+	\ 		[ 'spell', 'fileformat', 'fileencoding', 'filetype' ] ] },
+	\ 'component': {
+	\ 	'fileformat': '%{&ff!="unix"?&ff:""}',
+	\ 	'fileencoding': '%{&fenc!=#"utf-8"?&fenc!=#""?&fenc:&enc:""}',},
+	\ 'component_visible_condition' : {
+	\ 	'fileformat' : '&ff!=#"unix"',
+	\ 	'fileencoding' : '&fenc!=#"utf-8"',},
+	\ 'component_function': {
+	\ 	'gitbranch': 'fugitive#head'},
+	\ }
 " }}}
 " MuComplete {{{
 set completeopt+=menuone
