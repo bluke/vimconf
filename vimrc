@@ -42,15 +42,6 @@ set foldnestmax=5
 " CtrlP {{{
 let g:ctrlp_cmd = 'CtrlPBuffer'
 " }}}
-" Grammalecte {{{
-let g:grammalecte_cli_py='~/gram/cli.py'
-noremap <localleader>gh :GrammalecteClear<CR>
-noremap <localleader>gl :/begin{document}/,/end{document}/GrammalecteCheck<CR>
-noremap <localleader>gg :GrammalecteCheck<CR>
-inoremap <localleader>gl <c-o>:/begin{document}/,/end{document}/GrammalecteCheck<CR>
-inoremap <localleader>gg <c-o>:GrammalecteCheck<CR>
-inoremap <localleader>gh <c-o>:GrammalecteClear<CR>
-" }}}
 " Lightline {{{
 set laststatus=2
 let g:lightline = {
@@ -83,8 +74,8 @@ inoremap <expr> <c-@> mucomplete#popup_exit("\<cr>")
 set completeopt+=noinsert
 let g:mucomplete#enable_auto_at_startup = 1
 let g:mucomplete#cycle_with_trigger = 1
-imap <c-n> <plug>(MUcompleteFwd)
-imap <c-b> <plug>(MUcompleteBwd)
+inoremap <c-n> <plug>(MUcompleteFwd)
+inoremap <c-b> <plug>(MUcompleteBwd)
 " }}}
 " Syntastic {{{
 "set statusline+=%#warningmsg#
@@ -126,9 +117,9 @@ inoremap <leader>bn <c-o>:bn<CR>
 inoremap <leader>bb <c-o>:bp<CR>
 " }}}
 " FKeys {{{
-imap <F5> <c-o><F5>
-imap <F7> <c-o><F7>
-imap <F8> <c-o><F8>
+inoremap <F5> <c-o><F5>
+inoremap <F7> <c-o><F7>
+inoremap <F8> <c-o><F8>
 " }}}
 " }}}
 " leader{{{
@@ -151,10 +142,6 @@ nnoremap <leader>bs :split<CR>
 nnoremap <leader>bv :vsplit<cR>
 nnoremap <leader>bn :bn<CR>
 nnoremap <leader>bb :bp<CR>
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
 " }}}
 " }}}
 " AUColors {{{
