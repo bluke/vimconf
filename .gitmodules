@@ -25,3 +25,6 @@
 [submodule "bundle/vim-speeddating"]
 	path = bundle/vim-speeddating
 	url = git://github.com/tpope/vim-speeddating.git
+[submodule "bundle/ale"]
+	path = bundle/ale
+	url = https://github.com/dense-analysis/ale.git
