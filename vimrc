@@ -77,6 +77,10 @@ let g:mucomplete#cycle_with_trigger = 1
 inoremap <c-n> <plug>(MUcompleteFwd)
 inoremap <c-b> <plug>(MUcompleteBwd)
 " }}}
+" ALE {{{
+"let g:ale_ruby_rubocop_options = "--except Metrics/*,Style/ParallelAssignment,"
+let g:ale_ruby_rubocop_options = "--except Metrics/MethodLength,Metrics/LineLength,Metrics/AbcSize,Style/ParallelAssignment,"
+" }}}
 " Syntastic {{{
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
