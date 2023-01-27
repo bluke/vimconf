@@ -27,6 +27,7 @@ cmap w!! w !sudo tee % >/dev/null
 " }}}
 " File Reactive {{{
 syntax enable
+set modeline
 set modelines=1
 "Filetype functions
 filetype on            " enables filetype detection
@@ -72,6 +73,7 @@ set belloff+=ctrlg " If Vim beeps during completion
 "inoremap <expr> <c-@> mucomplete#popup_exit("\<cr>")
 "set completeopt+=noselect
 set completeopt+=noinsert
+set completeopt-=preview
 let g:mucomplete#enable_auto_at_startup = 1
 let g:mucomplete#cycle_with_trigger = 1
 inoremap <c-n> <plug>(MUcompleteFwd)
@@ -80,6 +82,10 @@ inoremap <c-b> <plug>(MUcompleteBwd)
 " ALE {{{
 "let g:ale_ruby_rubocop_options = "--except Metrics/*,Style/ParallelAssignment,"
 let g:ale_ruby_rubocop_options = "--except Metrics/MethodLength,Metrics/LineLength,Metrics/AbcSize,Style/ParallelAssignment,"
+let g:ale_linters = {'rust': ['analyzer']}
+let g:ale_fixers = {'rust': ['rustfmt', 'remove_trailing_lines', 'trim_whitespace']}
+let g:ale_rust_analyzer_executable = "/home/lbertot/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/rust-analyzer"
+set omnifunc=ale#completion#OmniFunc
 " }}}
 " Syntastic {{{
 "set statusline+=%#warningmsg#
