@@ -22,12 +22,9 @@
 [submodule "bundle/vim-orgmode"]
 	path = bundle/vim-orgmode
 	url = https://github.com/jceb/vim-orgmode
-[submodule "bundle/vim-speeddating"]
-	path = bundle/vim-speeddating
-	url = git://github.com/tpope/vim-speeddating.git
 [submodule "bundle/ale"]
 	path = bundle/ale
 	url = https://github.com/dense-analysis/ale.git
-[submodule "/home/lbertot/.vim/bundle/rust.vim"]
-	path = /home/lbertot/.vim/bundle/rust.vim
-	url = https://github.com/rust-lang/rust.vim.git
+[submodule "bundle/vimwiki"]
+	path = bundle/vimwiki
+	url = https://github.com/vimwiki/vimwiki.git
