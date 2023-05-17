@@ -113,6 +113,10 @@ let g:vimtex_compiler_latexmk = {'callback' : 0}
 let g:vimtex_fold_enabled = 1
 let g:vimtex_fold_manual = 1
 " }}}
+" {{{ vimwiki
+let g:vimwiki_list = [{'auto_toc':1, 'links_space_char': '_', 'auto_tags': 1, 'auto_diary_index': 1}]
+let g:vimwiki_toc_header_level = 2
+" }}}
 " }}}
 " Shortcuts {{{
 " Insert mode {{{
