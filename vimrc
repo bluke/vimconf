@@ -119,7 +119,6 @@ let g:vimtex_fold_manual = 1
 inoremap jk <ESC>
 inoremap <leader><leader> <c-o>
 inoremap <leader>f <c-o>za
-inoremap <leader>w <c-o>:w<CR>
 " Buffers {{{
 inoremap <leader>bs <c-o>:split<CR>
 inoremap <leader>bv <c-o>:vsplit<CR>
@@ -136,7 +135,6 @@ inoremap <F8> <c-o><F8>
 nnoremap <leader>h :let @/=""<CR>
 nnoremap <leader>f za
 " Saving
-nnoremap <leader>w :w<cr>
 " }}}
 " Fkeys {{{
 " Paste toggle
