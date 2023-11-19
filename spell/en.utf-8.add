@@ -33,3 +33,4 @@ JupyterHub
 hostname
 testbeds
 kubernetese
+kubernetes
