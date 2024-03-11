@@ -10,5 +10,5 @@ let b:loaded_wik=1
 
 set tabstop=3
 set shiftwidth=0
-set tw=120
-let &colorcolumn=121
+set tw=100
+let &colorcolumn=101

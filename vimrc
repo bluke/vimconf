@@ -20,6 +20,7 @@ set incsearch	"seach as you type
 set hlsearch 	"hilight search
 set ignorecase	"ingorecase
 set smartcase	"don't ignore first capital letter
+set mouse=""
 "set mouse=a	"enable mouse of All modes
 """ }}}
 " Commands {{{
